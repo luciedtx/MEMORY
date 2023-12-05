@@ -1,0 +1,98 @@
+*{
+    font-family: 'Nova Square';
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+  }
+  
+  html {
+    line-height: 1.15; 
+    -webkit-text-size-adjust: 100%; 
+  }
+  
+  body {
+    height: 100vh;
+    background: rgb(228, 250, 255);
+  }
+  
+  #header{
+    display:flex;
+    align-items: center;
+    background-color: rgb(129, 156, 230);
+  
+  } 
+  
+  #logo{
+    margin: 10px;
+    width:400px;
+    height:100px;
+  }
+  ul{
+    list-style-type: none;
+    padding-bottom: 10px;
+    overflow: hidden;
+    display: flex;
+  }
+  
+  li{
+    margin-right: 40px;
+    padding: 20px 10px;
+  
+  }
+  #firstchild{
+    margin-left:90px;
+  }
+  li a{
+    font-size: 130%;
+    display: flex;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    text-align: center;
+  }
+  #profil{
+    height: 600px;
+    width: 55%;
+    margin: auto;
+    margin-top: 4%;
+    background-color: rgb(129, 176, 230);
+    border-radius: 5px;
+}
+ul{
+    list-style-type: none;
+    margin: 10px;
+    padding: 10px;
+    overflow: hidden;
+    display: flex;
+  }
+  li{
+    margin-right: 20px;
+    color: white;
+    font-size: large
+  }
+  
+  li a{
+    display: inline-block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+#profiltitle{
+    background-color: rgb(147, 206, 245);
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding: 1%;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+#profilcontent{
+    margin-left: 5%;
+    flex-direction: column;
+    color: white;
+    font-size: 400%;
+}

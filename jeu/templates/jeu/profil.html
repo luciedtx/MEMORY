@@ -1,0 +1,66 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Square&display=swap" rel="stylesheet">
+    <link rel="icon" href="css/image/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static 'css/image/favicon.ico'%}" type="image/x-icon">
+    <title> Memory Game </title>
+    {% block css %}
+        <link rel="stylesheet" href="{% static 'css/normalize.css'%}">
+        {% endblock %}
+</head>
+<body>
+    <section class="title">
+        <div id="header">
+          {%block navbar%}
+              <div id="logo">
+              <img src="{% static 'css/image/memory.png'%}"  width=100px height=100px></a>
+              </div>
+              <ul id="menu">
+                  <li id="firstchild"><a href=index.php id="links" target="_blank">Accueil</a></li>
+                  <li><a href=friends.php id="links" target="_blank">Profil</a></li>
+                  <li><a href=""">Game</a>
+                  <li><a href=inscription.php id="links" target="_blank">Sign Up</a></li>
+                  <li><a href=connexion.php id="links" target="_blank">Log in</a></li>
+                  <li><a href=connexion.php id="links" target="_blank">API</a></li>
+      
+              </ul>
+              {% endblock %}
+          </div>
+        </section>
+    <section id="profil">
+        <h1 id="profiltitle">
+            Mon Profil
+        </h1>
+        <ul id="profilcontent">
+            <li>
+                Pseudo : 
+            </li>
+            <li>
+                Score global atteint : 
+            </li>
+            <li>
+                Parties jouées :
+            </li>
+        </ul>
+        
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
