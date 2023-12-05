@@ -13,13 +13,13 @@
   
   body {
     height: 100vh;
-    background: rgb(228, 250, 255);
+    background-color: rgb(228, 250, 255);
   }
   
   #header{
     display:flex;
     align-items: center;
-    background-color: rgb(129, 156, 230);
+    background-color: rgb(129, 176, 230);
   
   } 
   
@@ -53,13 +53,19 @@
     text-decoration: none;
     text-align: center;
   }
+
+  nav ul li a:hover {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1); /* Ombre textuelle pour créer l'effet de brillance */
+}
   #profil{
-    height: 600px;
+    display: block;
+    height: 725px;
     width: 55%;
     margin: auto;
     margin-top: 4%;
     background-color: rgb(129, 176, 230);
     border-radius: 5px;
+    margin-bottom: 20%;
 }
 ul{
     list-style-type: none;
@@ -78,14 +84,16 @@ ul{
     display: inline-block;
     text-align: center;
     padding: 14px 16px;
-    text-decoration: none;
+    text-decoration: none
   }
+
+  
   
 #profiltitle{
     background-color: rgb(147, 206, 245);
     text-align: center;
     color: rgb(255, 255, 255);
-    padding: 1%;
+    padding: 1.5%;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
 }
@@ -96,3 +104,15 @@ ul{
     color: white;
     font-size: 400%;
 }
+
+#historique{
+  background-color: rgb(147, 206, 245);
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 1%;
+
+}
+
+/* #parties{
+  flex-direction: column;
+} */
