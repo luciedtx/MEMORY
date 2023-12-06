@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Connexion </title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nova+Square&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/inscription.css'%}">
+    </head>
+    <body>
+        <section class="title">
+            <div id="header">
+              {%block navbar%}
+                <div id="logo">
+                  <img src="{% static 'css/image/memory.png'%}"  width=100px height=100px></a>
+                </div>
+                <nav class="menu">
+                    <ul>
+                        <li id="firstchild"><a href=index.php id="links" target="_blank">Accueil</a></li>
+                        <li><a href=friends.php id="links" target="_blank">Profil</a></li>
+                        <li><a href="">Game</a>
+                        <li><a href=inscription.php id="links" target="_blank">Sign Up</a></li>
+                        <li><a href=connexion.php id="links" target="_blank">Log in</a></li>
+                        <li><a href=connexion.php id="links" target="_blank">API</a></li>
+            
+                    </ul>
+                </nav>
+                {% endblock %}
+            </div>
+        </section>
+        <section id="login">
+            <h2 id="login_title">
+                Connexion
+            </h2>
+
+        </section>
+
+
+    </body>
+</html>
