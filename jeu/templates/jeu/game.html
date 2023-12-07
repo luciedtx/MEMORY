@@ -22,15 +22,14 @@
             </div>
             <nav class="menu">
               <ul>
-                  
                   <li id="firstchild"><a href= "{%url 'index'%}">Accueil</a></li>
                   {% if user.is_authenticated %}
                   <li><a href="{%url 'game'%}"> Game</a>
-                      <li class="droite"><a href="{% url 'deconnect' %}">Deconnexion</a></li>
-                      <li><a href="{%url 'profil'%}" > Profil</a></li>
+                  <li class="droite"><a href="{% url 'deconnect' %}">Deconnexion</a></li>
+                  <li><a href="{%url 'profil'%}" > Profil</a></li>
                   <li><a href="{%url 'inscription'%}" >Sign Up</a></li>
                   {% else %}
-                      <li class="droite"><a href="{% url 'connexion' %}">Connexion/Inscription</a></li>
+                  <li class="droite"><a href="{% url 'connexion' %}">Connexion/Inscription</a></li>
                   {% endif %}
                   <li><a href="" >API</a></li>
               </ul>
@@ -38,6 +37,7 @@
         {% endblock %}
         </div>
     </section>
+    <div id="score-display"> SCORE : <span id="score-value"></span></div>
     <section class="memory-game">
       <div class="memory-card" data-framework="1">
         <img class="back-face"src="{% static 'image/questionmark.png'%}" alt="Aurelia" />
@@ -112,6 +112,6 @@
       </div>
     </section>
 
-    <script src="{% static 'js/tamer.js'%}"></script>
+    <script src="{% static 'js/jeu.js'%}"></script>
   </body>
 </html>

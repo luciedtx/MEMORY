@@ -3,13 +3,15 @@ const cards = document.querySelectorAll('.memory-card');
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
-let scre = 0
+let score = 0;
 cards.forEach(card => card.addEventListener('click', flipCard));
 
 function flipCard() {
-
+  if (hasFlippedCard) {
+    return;
+  }
   if (lockBoard) return;
-  if (this == firstCard) return;
+  if (this === firstCard) return;
 
   this.classList.add('flip');
 
@@ -27,6 +29,8 @@ function checkForMatch() {
   let isMatch = firstCard.dataset.framework == secondCard.dataset.framework;
 
   isMatch ? disableCards() : unflipCards();
+  if is
+  document.getElementById('score-value').textContent = score;
 }
 
 function disableCards() {
