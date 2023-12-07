@@ -1,0 +1,59 @@
+*{
+    font-family: 'Nova Square';
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+  }
+  
+  html {
+    line-height: 1.15; 
+    -webkit-text-size-adjust: 100%; 
+  }
+  
+  body {
+    height: 100vh;
+    background-color: rgb(228, 250, 255);
+  }
+  
+  #header{
+    display:flex;
+    align-items: center;
+    background-color: rgb(129, 176, 230);
+  
+  } 
+  
+  #logo{
+    margin: 10px;
+    width:400px;
+    height:100px;
+  }
+  ul{
+    list-style-type: none;
+    padding-bottom: 10px;
+    overflow: hidden;
+    display: flex;
+  }
+  
+  li{
+    margin-right: 40px;
+    padding: 20px 10px;
+  
+  }
+  #firstchild{
+    margin-left:90px;
+  }
+  li a{
+    font-size: 130%;
+    display: flex;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  nav ul li a:hover {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1); /* Ombre textuelle pour créer l'effet de brillance */
+}

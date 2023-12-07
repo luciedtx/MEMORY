@@ -34,6 +34,26 @@
             <h2 id="signup_title">
                 Inscription
             </h2>
+            <form id="formulaire" method="post" action="{% url 'inscription'%}">
+                {% csrf_token %}
+                <div class="input">
+                    <p>EMAIL :</p>
+                    <input type="email" name="Email"><br>
+                </div>
+                <div class="input">
+                    <p>NOM D'UTILISATEUR :</p>
+                    <input type="text" name="Pseudo"><br>
+                </div>
+                <div class="input">
+                    <p>MOT DE PASSE :</p>
+                    <input type="Password" name="Password">
+                </div>
+                <div class="input">
+                    <p>CONFIRMER LE MOT DE PASSE :</p>
+                    <input type="Password" name="Password">
+                </div>
+                <input type="button" value="Inscription" id="button_inscription">
+            </form>
 
         </section>
 

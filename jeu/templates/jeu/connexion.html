@@ -7,7 +7,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Nova+Square&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="{% static 'css/inscription.css'%}">
+        <link rel="stylesheet" href="{% static 'css/connexion.css'%}">
     </head>
     <body>
         <section class="title">
@@ -19,11 +19,11 @@
                 <nav class="menu">
                     <ul>
                         <li id="firstchild"><a href=index.php id="links" target="_blank">Accueil</a></li>
-                        <li><a href=friends.php id="links" target="_blank">Profil</a></li>
+                        <li><a href="profil.html" id="links" target="_blank">Profil</a></li>
                         <li><a href="">Game</a>
-                        <li><a href=inscription.php id="links" target="_blank">Sign Up</a></li>
-                        <li><a href=connexion.php id="links" target="_blank">Log in</a></li>
-                        <li><a href=connexion.php id="links" target="_blank">API</a></li>
+                        <li><a href=inscription.html id="links" target="_blank">Sign Up</a></li>
+                        <li><a href=connexion.html id="links" target="_blank">Log in</a></li>
+                        <li><a href=connexion.html id="links" target="_blank">API</a></li>
             
                     </ul>
                 </nav>
@@ -34,7 +34,18 @@
             <h2 id="login_title">
                 Connexion
             </h2>
-
+            <form id="formulaire" method="post" action="{% url 'connexion'%}">
+                {% csrf_token %}
+                <div class="input">
+                    <p>EMAIL OU NOM D'UTILISATEUR :</p>
+                    <input type="email" name="Email"><br>
+                </div>
+                <div class="input">
+                    <p>MOT DE PASSE :</p>
+                    <input type="Password" name="Password">
+                </div>
+                <input type="button" value="Connexion" id="button_connexion">
+            </form>
         </section>
 
 

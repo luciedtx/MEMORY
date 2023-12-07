@@ -60,7 +60,7 @@
 
 #login{
     display: block;
-    height: 500px;
+    height: 400px;
     width: 30%;
     margin: auto;
     margin-top: 4%;
@@ -75,4 +75,33 @@
     padding: 1.5%;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
+}
+
+/* centrer les formulaires dans la section de connexion */
+#formulaire{
+  padding: 10%;
+  text-align: justify;
+  margin-left: 5%;
+  font-size: 125%;
+}
+/* espacement entre les input et leurs formulaires */
+.input input{  
+  margin-top: 2%;
+  caret-color: rgb(23, 6, 51);
+  padding: 3px;
+  color: black;
+
+}
+/* espacement entre les formulaires */
+.input{
+  margin-bottom: 2%;
+}
+#button_connexion{
+  color: black;
+  padding: 1%;
+  background-color: white;
+  border-color:rgb(129, 176, 230);
+}
+#button_connexion:hover{
+  background-color: rgb(210, 228, 245);
 }

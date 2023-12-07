@@ -60,8 +60,8 @@
 
 #signup{
     display: block;
-    height: 500px;
-    width: 30%;
+    height: 450px;
+    width: 25%;
     margin: auto;
     margin-top: 4%;
     background-color: rgb(129, 176, 230);
@@ -75,4 +75,33 @@
     padding: 1.5%;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
+}
+
+/* centrer les formulaires dans la section de connexion */
+#formulaire{
+  padding: 10%;
+  text-align: justify;
+  margin-left: 10%;
+  font-size: 110%;
+}
+/* espacement entre les input et leurs formulaires */
+.input input{  
+  margin-top: 2%;
+  caret-color: rgb(23, 6, 51);
+  padding: 3px;
+  color: black;
+
+}
+/* espacement entre les formulaires */
+.input{
+  margin-bottom: 2%;
+}
+#button_inscription{
+  color: black;
+  padding: 1%;
+  background-color: white;
+  border-color:rgb(129, 176, 230);
+}
+#button_inscription:hover{
+  background-color: rgb(210, 228, 245);
 }
