@@ -22,7 +22,11 @@ body {
   background-color: rgb(129, 176, 230);
 
 } 
-
+#footer{
+  display:flex;
+  align-items: center;
+  background-color: rgb(129, 176, 230);
+}
 #logo{
   margin: 10px;
   width:400px;
@@ -59,24 +63,27 @@ nav ul li a:hover {
 }
 
 
-#signup{
-  background-color: rgb(129, 176, 230);
-  /* padding: 5%; */
-  
-  width: 70%;
+.signup{
+  display: block;
+  height: 450px;
+  width: 30%;
   margin: auto;
+  margin-top: 4%;
+  background-color: rgb(129, 176, 230);
+  border-radius: 10px;
+  margin-bottom: 20%;
 }
 #signup_title{
-    background-color: rgb(147, 206, 245);
-    text-align: center;
-    color: rgb(255, 255, 255);
-    padding: 1.5%;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
+  background-color: rgb(147, 206, 245);
+  text-align: center;
+  padding: 2%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  font-size: larger;
 }
 
 /* centrer les formulaires dans la section de connexion */
-.formulaire{
+#formulaire{
   padding: 10%;
   text-align: justify;
   margin-left: 5%;

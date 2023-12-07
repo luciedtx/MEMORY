@@ -21,8 +21,12 @@ body {
   align-items: center;
   background-color: rgb(129, 176, 230);
 
-} 
-
+}
+#footer{
+  display:flex;
+  align-items: center;
+  background-color: rgb(129, 176, 230);
+}
 #logo{
   margin: 10px;
   width:400px;
@@ -58,23 +62,23 @@ nav ul li a:hover {
   text-shadow: 0 0 10px rgba(255, 255, 255, 1); /* Ombre textuelle pour créer l'effet de brillance */
 }
 
-#login{
-    display: block;
-    height: 400px;
-    width: 30%;
-    margin: auto;
-    margin-top: 4%;
-    background-color: rgb(129, 176, 230);
-    border-radius: 5px;
-    margin-bottom: 20%;
+.login{
+  display: block;
+  height: 450px;
+  width: 30%;
+  margin: auto;
+  margin-top: 4%;
+  background-color: rgb(129, 176, 230);
+  border-radius: 10px;
+  margin-bottom: 20%;
 }
 #login_title{
-    background-color: rgb(147, 206, 245);
-    text-align: center;
-    color: rgb(255, 255, 255);
-    padding: 1.5%;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
+  background-color: rgb(147, 206, 245);
+  text-align: center;
+  padding: 2%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  font-size: larger;
 }
 
 /* centrer les formulaires dans la section de connexion */
@@ -83,6 +87,7 @@ nav ul li a:hover {
   text-align: justify;
   margin-left: 5%;
   font-size: 125%;
+
 }
 /* espacement entre les input et leurs formulaires */
 .input input{  
@@ -96,16 +101,14 @@ nav ul li a:hover {
 .input{
   margin-bottom: 2%;
 }
-#button_connexion{
+#button_inscription{
   color: black;
   padding: 1%;
   background-color: white;
   border-color:rgb(129, 176, 230);
+  margin: 1%;
 }
-#button_connexion:hover{
+#button_inscription:hover{
   background-color: rgb(210, 228, 245);
 }
 
-.corps{
-  align-items: center;
-}

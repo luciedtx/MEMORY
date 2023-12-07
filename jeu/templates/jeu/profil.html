@@ -1,84 +1,85 @@
 {%load static%}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nova+Square&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="{% static 'image/favicon.ico'%}"/>
-    <title> Memory Game </title>
-        {% block css %}
-        <link rel="stylesheet" href="{% static 'css/profil.css'%}">
-        {% endblock %}
-</head>
-<body>
-    <section class="title">
-        <div id="header">
-          {%block navbar%}
-            <div id="logo">
-              <img src="{% static 'image/memory.png'%}"  width=100px height=100px></a>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nova+Square&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="{% static 'image/favicon.ico'%}"/>
+        <title> Memory Game </title>
+            {% block css %}
+            <link rel="stylesheet" href="{% static 'css/profil.css'%}">
+            {% endblock %}
+    </head>
+    <body>
+        <!-- barre de navigation -->
+        <section class="title">
+            <div id="header">
+            {%block navbar%}
+                <div id="logo">
+                <img src="{% static 'image/memory.png'%}"  width=100px height=100px></a>
+                </div>
+                <nav class="menu">
+                    <ul>
+                        <li id="firstchild"><a href= "{%url 'index'%}">Accueil</a></li>
+                        <li><a href="{%url 'profil'%}" > Profil</a></li>
+                        <li><a href="{%url 'game'%}"> Game</a>
+                        <li><a href="{%url 'inscription'%}" >Sign Up</a></li>
+                        <li><a href="{%url 'connexion'%}" >Log in</a></li>
+                        <li><a href="" >API</a></li>
+                    </ul>
+                </nav>
+                {% endblock %}
             </div>
+        </section>
+        <!-- profil d'utilisateur -->
+        <section id="profil">
+            <h1 id="profiltitle">
+                Mon Profil
+            </h1>
+            <ul id="profilcontent">
+                <li>
+                    Pseudo : 
+                </li>
+                <li>
+                    Score global atteint : 
+                </li>
+                <li>
+                    Parties jouées :
+                </li>
+                <li>
+                    Nombres de victoires :
+                </li>
+                <li>
+                    Nombre de défaites :
+                </li>
+                <li>
+                    Historique des parties :
+                </li>
+                
+            </ul>
+            <section id="historique">
+                #Ici l'historique des parties jouées 
+            </section>
+        </section>
+        <!-- footer -->
+        <div id="footer">
             <nav class="menu">
                 <ul>
-                    <li id="firstchild"><a href= "{%url 'index'%}">Accueil</a></li>
-                    <li><a href="{%url 'profil'%}" > Profil</a></li>
+                    <li id="firstchild"><a href= "{%url 'index'%}">A propos de nous</a></li>
+                    {% if user.is_authenticated %}
                     <li><a href="{%url 'game'%}"> Game</a>
+                    <li class="droite"><a href="{% url 'deconnect' %}">Deconnexion</a></li>
+                    <li><a href="{%url 'profil'%}" > Profil</a></li>
                     <li><a href="{%url 'inscription'%}" >Sign Up</a></li>
-                    <li><a href="{%url 'connexion'%}" >Log in</a></li>
-                    <li><a href="" >API</a></li>
+                    {% else %}
+                    <li class="droite"><a href="https://fr.wikipedia.org/wiki/Jeu_de_paires" target="_blank" >Qu'est-ce que le memory ?</a></li>
+                    {% endif %}
+                    <li><a href="api" >API</a></li>
                 </ul>
             </nav>
-            {% endblock %}
         </div>
-    </section>
-    <section id="profil">
-        <h1 id="profiltitle">
-            Mon Profil
-        </h1>
-        <ul id="profilcontent">
-            <li>
-                Pseudo : 
-            </li>
-            <li>
-                Score global atteint : 
-            </li>
-            <li>
-                Parties jouées :
-            </li>
-            <li>
-                Nombres de victoires :
-            </li>
-            <li>
-                Nombre de défaites :
-            </li>
-            <li>
-                Historique des parties :
-            </li>
-            
-        </ul>
-        <section id="historique">
-            #Ici l'historique des parties jouées 
-            <!-- <ul id="parties">
-                <li> #Ici l'historique des parties jouées </li>
-                <li> #Ici l'historique des parties jouées </li>
-                <li> #Ici l'historique des parties jouées </li>
-            </ul> -->
-            
-        </section>
-
-    </section>
-
-
-
-
-
-
-
-
-
-
-
-</body>
+    </body>
 </html>

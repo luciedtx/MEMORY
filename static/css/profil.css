@@ -22,7 +22,11 @@ body {
   background-color: rgb(129, 176, 230);
 
 } 
-
+#footer{
+  display:flex;
+  align-items: center;
+  background-color: rgb(129, 176, 230);
+}
 #logo{
   margin: 10px;
   width:400px;
@@ -167,20 +171,20 @@ flex-direction: column;
   transform: rotateY(0deg);
 }
 
+
+
+#reset{
+color: rgb(129, 176, 230);
+padding: 1%;
+background-color: white;
+border-color:rgb(129, 176, 230);
+margin-left: 70%;
+border-radius: 45%;
+}
+
 #score{
   color: rgb(129, 176, 230);
   padding: 2%;
   margin-left: 31.5%;
   font-size: larger;
-}
-
-#reset{
-color: black;
-padding: 1%;
-background-color: white;
-border-color:rgb(129, 176, 230);
-}
-
-#points{
-  color: black;
 }

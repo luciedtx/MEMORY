@@ -13,36 +13,59 @@
         <link rel="shortcut icon" href="{% static 'image/favicon.ico'%}"/>
     </head>
     <body>
+        <!-- barre de navigation -->
         <div id="header">
         {%block navbar%}
             <div id="logo">
-            <img src="{% static 'image/memory.png'%}" alt='efazvaef' width=100px height=100px></a>
+            <img src="{% static 'image/memory.png'%}" alt='logo' width=100px height=100px></a>
             </div>
             <nav class="menu">
                 <ul>
                     <li id="firstchild"><a href= "{%url 'index'%}">Accueil</a></li>
                     <li><a href="{%url 'profil'%}" > Profil</a></li>
                     <li><a href="{%url 'game'%}"> Game</a>
-                    <li><a href="{%url 'inscription'%}" >Sign Up</a></li>
-                    <li><a href="{%url 'connexion'%}" >Log in</a></li>
+                    <li><a href="{%url 'inscription'%}" >S'inscrire</a></li>
                     <li><a href="" >API</a></li>
                 </ul>
             </nav>
-            {%endblock%}
-<h1>Connexion</h1>
+        {%endblock%}
+        </div>
+        <!-- formulaire de connexion -->
+        <section class="login">
+            <div id="login_title"> Connexion </div>
 
-<div class="corps">
-<form method="post" action="{% url 'index2' %}">
-    {% csrf_token %}
-    <label for="username">Nom d'utilisateur :</label>
-    <input type="text" name="username" required>
-    <br>
-    <label for="password">Mot de passe :</label>
-    <input type="password" name="password" required>
-    <br>
-    <input type="submit" value="Se connecter">  
-</form>
-<p>Pas encore membre ? <a href="{% url 'inscription' %}">Inscrivez-vous ici</a>.</p>
-</div>
-</body>
+            <form id="formulaire">
+                <div class="input">
+                    EMAIL OU NOM D'UTILISATEUR <br>
+                    <input type="email" name="Email" required><br>
+                </div>
+                <div class="input">
+                    MOT DE PASSE <br>
+                    <input type="Password" name="Password" required>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" name="Checkbox"> Se souvenir de moi 
+                </div> <br>
+                <input type="button" value="Connexion" id="button_inscription">
+                <p>Pas encore membre ? <a href="{% url 'inscription' %}">Inscrivez-vous ici</a>.</p>
+            </form>
+        </section>
+        <!-- footer -->
+        <div id="footer">
+            <nav class="menu">
+                <ul>
+                    <li id="firstchild"><a href= "{%url 'index'%}">A propos de nous</a></li>
+                    {% if user.is_authenticated %}
+                    <li><a href="{%url 'game'%}"> Game</a>
+                    <li class="droite"><a href="{% url 'deconnect' %}">Deconnexion</a></li>
+                    <li><a href="{%url 'profil'%}" > Profil</a></li>
+                    <li><a href="{%url 'inscription'%}" >Sign Up</a></li>
+                    {% else %}
+                    <li class="droite"><a href="https://fr.wikipedia.org/wiki/Jeu_de_paires" target="_blank" >Qu'est-ce que le memory ?</a></li>
+                    {% endif %}
+                    <li><a href="api" >API</a></li>
+                </ul>
+            </nav>
+        </div>
+    </body>
 </html>

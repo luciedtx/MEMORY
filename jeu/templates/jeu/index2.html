@@ -13,6 +13,7 @@
         <link rel="shortcut icon" href="{% static 'image/favicon.ico'%}"/>
     </head>
     <body>
+        <!-- barre de navigation -->
         <div id="header">
         {%block navbar%}
             <div id="logo">
@@ -29,6 +30,7 @@
             </nav>
         {% endblock %}
         </div>
+        <!-- accueil du site -->
         <section id="bienvenue">
             <img src="{% static 'image/hellokitty.png'%}" alt="hello kitty" id="hellokitty">
             <div id="texte">
@@ -39,6 +41,22 @@
             <img src="{% static 'image/hellokitty2.png'%}" alt="hello kitty2" id="hellokitty2">
             
         </section>
-        
+        <!-- footer -->
+        <div id="footer">
+            <nav class="menu">
+                <ul>
+                    <li id="firstchild"><a href= "{%url 'index'%}">A propos de nous</a></li>
+                    {% if user.is_authenticated %}
+                    <li><a href="{%url 'game'%}"> Game</a>
+                    <li class="droite"><a href="{% url 'deconnect' %}">Deconnexion</a></li>
+                    <li><a href="{%url 'profil'%}" > Profil</a></li>
+                    <li><a href="{%url 'inscription'%}" >Sign Up</a></li>
+                    {% else %}
+                    <li class="droite"><a href="https://fr.wikipedia.org/wiki/Jeu_de_paires" target="_blank" >Qu'est-ce que le memory ?</a></li>
+                    {% endif %}
+                    <li><a href="api" >API</a></li>
+                </ul>
+            </nav>
+        </div>
     </body>
 </html>

@@ -14,6 +14,7 @@
   </head>
 
   <body>
+    <!-- barre de navigation -->
     <section class="title">
       <div id="header">
         {%block navbar%}
@@ -37,7 +38,9 @@
         {% endblock %}
         </div>
     </section>
-    <div id="points"> SCORE : </div>
+    <!-- affichage du score de la partie -->
+    <div id="score"> SCORE : </div>
+    <!-- affichage du jeu du memory -->
     <section class="memory-game">
       <div class="memory-card" data-framework="1">
         <img class="back-face"src="{% static 'image/questionmark.png'%}" alt="Aurelia" />
@@ -121,5 +124,23 @@
             location.reload();
         }
     </script>
+    <!-- footer -->
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <div id="footer">
+      <nav class="menu">
+          <ul>
+              <li id="firstchild"><a href= "{%url 'index'%}">A propos de nous</a></li>
+              {% if user.is_authenticated %}
+              <li><a href="{%url 'game'%}"> Game</a>
+              <li class="droite"><a href="{% url 'deconnect' %}">Deconnexion</a></li>
+              <li><a href="{%url 'profil'%}" > Profil</a></li>
+              <li><a href="{%url 'inscription'%}" >Sign Up</a></li>
+              {% else %}
+              <li class="droite"><a href="https://fr.wikipedia.org/wiki/Jeu_de_paires" target="_blank" >Qu'est-ce que le memory ?</a></li>
+              {% endif %}
+              <li><a href="api" >API</a></li>
+          </ul>
+      </nav>
+    </div>
   </body>
 </html>
