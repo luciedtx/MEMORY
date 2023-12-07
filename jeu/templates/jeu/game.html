@@ -1,0 +1,117 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="{% static 'css/profil.css'%}">
+    <link rel="shortcut icon" href="{% static 'image/favicon.ico'%}"/>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Square&display=swap" rel="stylesheet">
+    
+  </head>
+
+  <body>
+    <section class="title">
+      <div id="header">
+        {%block navbar%}
+            <div id="logo">
+            <img src="{% static 'image/memory.png'%}" alt='logo' width=100px height=100px></a>
+            </div>
+            <nav class="menu">
+              <ul>
+                  
+                  <li id="firstchild"><a href= "{%url 'index'%}">Accueil</a></li>
+                  {% if user.is_authenticated %}
+                  <li><a href="{%url 'game'%}"> Game</a>
+                      <li class="droite"><a href="{% url 'deconnect' %}">Deconnexion</a></li>
+                      <li><a href="{%url 'profil'%}" > Profil</a></li>
+                  <li><a href="{%url 'inscription'%}" >Sign Up</a></li>
+                  {% else %}
+                      <li class="droite"><a href="{% url 'connexion' %}">Connexion/Inscription</a></li>
+                  {% endif %}
+                  <li><a href="" >API</a></li>
+              </ul>
+          </nav>
+        {% endblock %}
+        </div>
+    </section>
+    <section class="memory-game">
+      <div class="memory-card" data-framework="1">
+        <img class="back-face"src="{% static 'image/questionmark.png'%}" alt="Aurelia" />
+        <img class="front-face"  src="{% static 'image/1.png'%}" alt="JS Badge" />
+      </div>
+      <div class="memory-card" data-framework="1">
+        <img class="back-face" src="{% static 'image/questionmark.png'%}" alt="Aurelia" />
+        <img class="front-face" src="{% static 'image/1.png'%}" alt="JS Badge" />
+      </div>
+
+      <div class="memory-card" data-framework="2">
+        <img class="back-face" src="{% static 'image/questionmark.png'%}" alt="Vue" />
+        <img class="front-face" src="{% static 'image/2.png'%}" alt="JS Badge" />
+      </div>
+      <div class="memory-card" data-framework="2">
+        <img class="back-face" src="{% static 'image/questionmark.png'%}" alt="Vue" />
+        <img class="front-face" src="{% static 'image/2.png'%}" alt="JS Badge" />
+      </div>
+
+      <div class="memory-card" data-framework="3">
+        <img class="back-face" src="{% static 'image/questionmark.png'%}" alt="Angular" />
+        <img class="front-face" src="{% static 'image/3.png'%}" alt="JS Badge" />
+      </div>
+      <div class="memory-card" data-framework="3">
+        <img class="back-face" src="{% static 'image/questionmark.png'%}" alt="Angular" />
+        <img class="front-face" src="{% static 'image/3.png'%}" alt="JS Badge" />
+      </div>
+
+      <div class="memory-card" data-framework="4">
+        <img class="back-face" src="{% static 'image/questionmark.png'%}" alt="Ember" />
+        <img class="front-face" src="{% static 'image/4.png'%}" alt="JS Badge" />
+      </div>
+      <div class="memory-card" data-framework="4">
+        <img class="back-face" src="{% static 'image/questionmark.png'%}" alt="Ember" />
+        <img class="front-face" src="{% static 'image/4.png'%}" alt="JS Badge" />
+      </div>
+
+      <div class="memory-card" data-framework="5">
+        <img class="back-face" src="{% static 'image/questionmark.png'%}" alt="Backbone" />
+        <img class="front-face" src="{% static 'image/5.png'%}" alt="JS Badge" />
+      </div>
+      <div class="memory-card" data-framework="5">
+        <img class="back-face" src="{% static 'image/questionmark.png'%}" alt="Backbone" />
+        <img class="front-face" src="{% static 'image/5.png'%}" alt="JS Badge" />
+      </div>
+
+      <div class="memory-card" data-framework="6">
+        <img class="back-face" src="{% static 'image/questionmark.png'%}" alt="React" />
+        <img class="front-face" src="{% static 'image/6.png'%}" alt="JS Badge" />
+      </div>
+      <div class="memory-card" data-framework="6">
+        <img class="back-face" src="{% static 'image/questionmark.png'%}" alt="React" />
+        <img class="front-face" src="{% static 'image/6.png'%}" alt="JS Badge" />
+      </div>
+
+      <div class="memory-card" data-framework="7">
+        <img class="back-face" src="{% static 'image/questionmark.png'%}" alt="React" />
+        <img class="front-face" src="{% static 'image/7.png'%}" alt="JS Badge" />
+      </div>
+      <div class="memory-card" data-framework="7">
+        <img class="back-face" src="{% static 'image/questionmark.png'%}" alt="React" />
+        <img class="front-face" src="{% static 'image/7.png'%}" alt="JS Badge" />
+      </div>
+
+      <div class="memory-card" data-framework="8">
+        <img class="back-face" src="{% static 'image/questionmark.png'%}" alt="React" />
+        <img class="front-face" src="{% static 'image/8.png'%}" alt="JS Badge" />
+      </div>
+      <div class="memory-card" data-framework="8">
+        <img class="back-face" src="{% static 'image/questionmark.png'%}" alt="React" />
+        <img class="front-face" src="{% static 'image/8.png'%}" alt="JS Badge" />
+      </div>
+    </section>
+
+    <script src="{% static 'js/tamer.js'%}"></script>
+  </body>
+</html>

@@ -9,7 +9,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Nova+Square&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="{% static 'css/connexion.css'%}">
+        <link rel="stylesheet" href="{% static 'css/style.css'%}">
         <link rel="shortcut icon" href="{% static 'image/favicon.ico'%}"/>
     </head>
     <body>
@@ -21,28 +21,24 @@
             <nav class="menu">
                 <ul>
                     <li id="firstchild"><a href= "{%url 'index'%}">Accueil</a></li>
-                    <li><a href="{%url 'profil'%}" > Profil</a></li>
                     <li><a href="{%url 'game'%}"> Game</a>
-                    <li><a href="{%url 'inscription'%}" >Sign Up</a></li>
-                    <li><a href="{%url 'connexion'%}" >Log in</a></li>
-                    <li><a href="" >API</a></li>
+                    <li class="droite"><a href="{% url 'deconnect' %}">Deconnexion</a></li>
+                    <li><a href="{%url 'profil'%}" > Profil</a></li>
+                    <li><a href="api" >API</a></li>
                 </ul>
             </nav>
-            {%endblock%}
-<h1>Connexion</h1>
-
-<div class="corps">
-<form method="post" action="{% url 'index2' %}">
-    {% csrf_token %}
-    <label for="username">Nom d'utilisateur :</label>
-    <input type="text" name="username" required>
-    <br>
-    <label for="password">Mot de passe :</label>
-    <input type="password" name="password" required>
-    <br>
-    <input type="submit" value="Se connecter">  
-</form>
-<p>Pas encore membre ? <a href="{% url 'inscription' %}">Inscrivez-vous ici</a>.</p>
-</div>
-</body>
+        {% endblock %}
+        </div>
+        <section id="bienvenue">
+            <img src="{% static 'image/hellokitty.png'%}" alt="hello kitty" id="hellokitty">
+            <div id="texte">
+                Bienvenue sur le site du memory des chats ! <br><br>
+                Retrouvez ici un jeu de memory en ligne gratuit pour tout les adeptes de chats. <br> Vous pouvez vous creer un compte afin d'enregistrer vos parties et avoir une vue globale de vos statistiques de jeu. <br><br>
+                Amusez vous bien !
+            </div>
+            <img src="{% static 'image/hellokitty2.png'%}" alt="hello kitty2" id="hellokitty2">
+            
+        </section>
+        
+    </body>
 </html>

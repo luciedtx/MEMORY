@@ -41,14 +41,14 @@ li{
 
 }
 #firstchild{
-  margin-left:90px;
+  margin-left:100px;
 }
 li a{
   font-size: 130%;
   display: flex;
   color: rgb(255, 255, 255);
   text-align: center;
-  padding: 10px;
+  padding: 5%;
   margin-right: 10px;
   text-decoration: none;
   text-align: center;
@@ -59,22 +59,19 @@ nav ul li a:hover {
 }
 
 #bienvenue{
+  display: block;
   height: 625px;
   width: 55%;
   margin: auto;
-  margin-top: 10%;
-  padding-top: 1%;
+  margin-top: 4%;
   background-color: rgb(129, 176, 230);
   border-radius: 5px;
   margin-bottom: 20%;
-  
 }
 #texte{
+  padding: 3%;
   padding-top: 2%;
-  padding-left: 4%;
-  padding-right: 4%;
   font-size: 130%;
-  text-align: justify;
 }
 #topimg{
   display: block;
@@ -84,10 +81,4 @@ nav ul li a:hover {
 }
 #hellokitty2{
   margin-left: 60%;
-}
-
-#footer{
-  display:flex;
-  align-items: center;
-  background-color: rgb(129, 176, 230);
 }

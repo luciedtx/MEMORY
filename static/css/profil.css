@@ -1,0 +1,175 @@
+*{
+  font-family: 'Nova Square';
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: rgb(255, 255, 255);
+}
+
+html {
+  line-height: 1.15; 
+  -webkit-text-size-adjust: 100%; 
+}
+
+body {
+  height: 100vh;
+  background-color: rgb(228, 250, 255);
+}
+
+#header{
+  display:flex;
+  align-items: center;
+  background-color: rgb(129, 176, 230);
+
+} 
+
+#logo{
+  margin: 10px;
+  width:400px;
+  height:100px;
+}
+ul{
+  list-style-type: none;
+  padding-bottom: 10px;
+  overflow: hidden;
+  display: flex;
+}
+
+li{
+  margin-right: 40px;
+  padding: 20px 10px;
+
+}
+#firstchild{
+  margin-left:90px;
+}
+li a{
+  font-size: 130%;
+  display: flex;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 10px;
+  margin-right: 10px;
+  text-decoration: none;
+  text-align: center;
+}
+
+nav ul li a:hover {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 1); /* Ombre textuelle pour créer l'effet de brillance */
+}
+
+#profil{
+  display: block;
+  height: 725px;
+  width: 55%;
+  margin: auto;
+  margin-top: 4%;
+  background-color: rgb(129, 176, 230);
+  border-radius: 5px;
+  margin-bottom: 20%;
+}
+ul{
+  list-style-type: none;
+  margin: 10px;
+  padding: 10px;
+  overflow: hidden;
+  display: flex;
+}
+li{
+  margin-right: 20px;
+  color: white;
+  font-size: large
+}
+
+li a{
+  display: inline-block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none
+}
+
+
+
+#profiltitle{
+  background-color: rgb(147, 206, 245);
+  text-align: center;
+  color: rgb(255, 255, 255);
+  padding: 1.5%;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+#profilcontent{
+  margin-left: 5%;
+  flex-direction: column;
+  color: white;
+  font-size: 400%;
+}
+
+#historique{
+background-color: rgb(147, 206, 245);
+margin-left: 5%;
+margin-right: 5%;
+padding: 1%;
+
+}
+
+/* #parties{
+flex-direction: column;
+} */
+
+.memory-game {
+  width: 640px;
+  height: 640px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+
+.memory-card {
+  width: calc(25% - 10px);
+  height: calc(33.333% - 10px);
+  margin: 5px;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .5s;
+  box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+}
+
+.memory-card:active {
+  transform: scale(0.97);
+  transition: transform .2s;
+}
+
+.memory-card.flip {
+  transform: rotateY(180deg);
+}
+
+.front-face,
+.back-face {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  border-radius: 5px;
+  background: rgb(129, 176, 230);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.front-face {
+  transform: rotateY(180deg);
+}
+
+.back-face {
+  transform: rotateY(0deg);
+}
+
+#score{
+  color: rgb(129, 176, 230);
+  padding: 2%;
+  margin-left: 31.5%;
+  font-size: larger;
+}
