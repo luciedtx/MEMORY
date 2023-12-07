@@ -3,7 +3,7 @@ const cards = document.querySelectorAll('.memory-card');
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
-let scre = 0
+let score = 0
 cards.forEach(card => card.addEventListener('click', flipCard));
 
 function flipCard() {
@@ -28,7 +28,14 @@ function flipCard() {
 function checkForMatch() {
   let isMatch = firstCard.dataset.framework == secondCard.dataset.framework;
 
-  isMatch ? disableCards() : unflipCards();
+  if (isMatch) {
+    disableCards();
+    // Assuming you have a variable 'score' that you want to display
+    score += 10; // Update the score as needed
+    document.getElementById('points').innerText = `SCORE = ${score}`;
+  } else {
+    unflipCards();
+  }
 }
 
 function disableCards() {

@@ -173,3 +173,14 @@ flex-direction: column;
   margin-left: 31.5%;
   font-size: larger;
 }
+
+#reset{
+color: black;
+padding: 1%;
+background-color: white;
+border-color:rgb(129, 176, 230);
+}
+
+#points{
+  color: black;
+}

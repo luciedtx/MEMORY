@@ -37,7 +37,7 @@
         {% endblock %}
         </div>
     </section>
-    <div id="score-display"> SCORE : <span id="score-value"></span></div>
+    <div id="points"> SCORE : </div>
     <section class="memory-game">
       <div class="memory-card" data-framework="1">
         <img class="back-face"src="{% static 'image/questionmark.png'%}" alt="Aurelia" />
@@ -113,5 +113,13 @@
     </section>
 
     <script src="{% static 'js/jeu.js'%}"></script>
+
+    <button id="reset" onclick="rechargerPage()">Recommencer</button>
+
+    <script>
+        function rechargerPage() {
+            location.reload();
+        }
+    </script>
   </body>
 </html>
